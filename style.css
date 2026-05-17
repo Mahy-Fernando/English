@@ -1,1 +1,221 @@
-css
+:root {
+  --color-background: #f3eee7;
+  --color-surface: #ffffff;
+  --color-text: #2b2723;
+  --color-muted: #6f675f;
+  --color-accent: #7a4f2b;
+  --color-accent-dark: #5f3b1f;
+  --color-success: #2f7d32;
+  --shadow-soft: 0 12px 32px rgba(0, 0, 0, 0.14);
+  --shadow-button: 0 8px 22px rgba(0, 0, 0, 0.12);
+  --radius-large: 22px;
+  --radius-medium: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+button {
+  font: inherit;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.flyer-section {
+  width: 100%;
+  animation: flyerEntrance 0.9s ease-out both;
+}
+
+.flyer-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.contact-section {
+  width: 100%;
+  padding: 24px 16px 32px;
+  background: linear-gradient(
+    180deg,
+    var(--color-background) 0%,
+    #ffffff 100%
+  );
+  animation: contactEntrance 0.8s ease-out 0.25s both;
+}
+
+.contact-title {
+  max-width: 620px;
+  margin: 0 auto 16px;
+  font-size: 22px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.contact-list {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+
+.copy-button {
+  width: 100%;
+  border: 0;
+  border-radius: var(--radius-medium);
+  padding: 18px 16px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  box-shadow: var(--shadow-button);
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.copy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+  background-color: #fffaf4;
+}
+
+.copy-button:active {
+  transform: scale(0.98);
+}
+
+.copy-button:focus-visible {
+  outline: 3px solid rgba(122, 79, 43, 0.35);
+  outline-offset: 3px;
+}
+
+.copy-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-accent-dark);
+}
+
+.copy-value {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  word-break: break-word;
+  color: var(--color-text);
+}
+
+.copy-note {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--color-muted);
+}
+
+.copy-message {
+  min-height: 24px;
+  max-width: 620px;
+  margin: 16px auto 0;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-success);
+}
+
+@keyframes flyerEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes contactEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .page {
+    max-width: 760px;
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .flyer-section {
+    padding: 18px 18px 0;
+    background: var(--color-background);
+  }
+
+  .flyer-image {
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .contact-section {
+    padding: 30px 22px 40px;
+  }
+
+  .contact-title {
+    font-size: 26px;
+  }
+
+  .contact-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .flyer-section,
+  .contact-section {
+    animation: none;
+  }
+
+  .copy-button {
+    transition: none;
+  }
+
+  .copy-button:hover {
+    transform: none;
+  }
+}
