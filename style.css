@@ -140,6 +140,11 @@ button {
   color: var(--color-muted);
 }
 
+.copy-note-jp {
+  display: block;
+  margin-top: 4px;
+}
+
 .copy-toast {
   position: fixed;
   left: 50%;
@@ -225,6 +230,16 @@ button {
   .contact-list {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.contact-title span {
+  display: block;
+}
+
+.contact-title-jp {
+  margin-top: 6px;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 @media (prefers-reduced-motion: reduce) {
