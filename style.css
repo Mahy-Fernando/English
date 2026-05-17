@@ -140,14 +140,32 @@ button {
   color: var(--color-muted);
 }
 
-.copy-message {
-  min-height: 24px;
-  max-width: 620px;
-  margin: 16px auto 0;
-  text-align: center;
+.copy-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 1000;
+  min-width: 220px;
+  max-width: calc(100% - 32px);
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: rgba(50, 50, 50, 0.92);
+  color: #ffffff;
   font-size: 15px;
   font-weight: 700;
-  color: var(--color-success);
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 16px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.copy-toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 @keyframes flyerEntrance {
