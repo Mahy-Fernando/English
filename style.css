@@ -127,9 +127,9 @@ button {
 
 .copy-value {
   display: block;
-  font-size: 16px;
+  font-size: clamp(11px, 3.1vw, 16px);
   font-weight: 600;
-  word-break: break-word;
+  white-space: nowrap;
   color: var(--color-text);
 }
 
