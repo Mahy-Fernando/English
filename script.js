@@ -48,14 +48,14 @@ function getSuccessMessage(button) {
   const label = button.querySelector('.copy-label')?.textContent || '';
 
   if (label.toLowerCase().includes('e-mail')) {
-    return 'E-mail copiado!';
+    return 'E-mail copiado!\nメールをコピーしました！';
   }
 
   if (label.toLowerCase().includes('line')) {
-    return 'Número do Line copiado!';
+    return 'Número do Line copiado!\nLINE番号をコピーしました！';
   }
 
-  return 'Informação copiada!';
+  return 'Informação copiada!\n情報をコピーしました！';
 }
 
 copyButtons.forEach((button) => {
