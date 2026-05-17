@@ -74,7 +74,8 @@ button {
   max-width: 620px;
   margin: 0 auto;
   display: grid;
-  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
 }
 
 .copy-button {
@@ -227,9 +228,6 @@ button {
     font-size: 26px;
   }
 
-  .contact-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 .contact-title span {
