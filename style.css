@@ -110,10 +110,18 @@ button {
 
 .copy-label {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 3px;
   font-size: 17px;
   font-weight: 700;
-  color: var(--color-accent-dark);
+  color: #1f5fbf;
+}
+
+.copy-label-jp {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1f5fbf;
 }
 
 .copy-value {
