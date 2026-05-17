@@ -1,1 +1,39 @@
-Site em construção
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>English</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="flyer-section" aria-label="Panfleto informativo">
+      <img class="flyer-image" src="panfleto.png" alt="Panfleto informativo">
+    </section>
+
+    <section class="contact-section" aria-label="Informações para contato">
+      <h1 class="contact-title">Informações de contato</h1>
+
+      <div class="contact-list">
+        <button class="copy-button" type="button" data-copy="ejp.kikugawa@gmail.com">
+          <span class="copy-label">Copiar e-mail</span>
+          <span class="copy-value">ejp.kikugawa@gmail.com</span>
+        </button>
+
+        <button class="copy-button" type="button" data-copy="080 6956-3763">
+          <span class="copy-label">Copiar Line</span>
+          <span class="copy-value">080 6956-3763</span>
+          <span class="copy-note">Apenas mensagens pelo Line. Não realizar ligação.</span>
+        </button>
+      </div>
+
+      <p class="copy-message" id="copyMessage" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
