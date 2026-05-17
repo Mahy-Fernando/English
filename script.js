@@ -1,12 +1,21 @@
 const copyButtons = document.querySelectorAll('.copy-button');
 const copyMessage = document.querySelector('#copyMessage');
 
+let messageTimer;
+
 function showMessage(message) {
   copyMessage.textContent = message;
+  copyMessage.classList.add('is-visible');
 
-  setTimeout(() => {
-    copyMessage.textContent = '';
-  }, 2500);
+  clearTimeout(messageTimer);
+
+  messageTimer = setTimeout(() => {
+    copyMessage.classList.remove('is-visible');
+
+    setTimeout(() => {
+      copyMessage.textContent = '';
+    }, 250);
+  }, 2000);
 }
 
 async function copyToClipboard(text) {
